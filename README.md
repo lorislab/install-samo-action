@@ -6,6 +6,13 @@
 ```
 
 ```
+  - uses: lorislab/install-samo-action@v1
+  - id: version
+    run: echo "stdout=$(samo project version)" >> $GITHUB_OUTPUT
+  - run: echo "${{ steps.version.outputs.stdout }}"
+```
+
+```
 - uses: lorislab/install-samo-action@v1
   with:
     version: "3.3.0"
