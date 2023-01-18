@@ -1,5 +1,9 @@
 name: 'Install samo build utility'
 description: 'Samo build and release project, helm and docker utility.'
+author: 'andrejpetras'
+branding:
+  icon: edit
+  color: blue
 inputs:
   version:
       description: 'Version of the samo build utility'
@@ -8,7 +12,7 @@ inputs:
   download_url:
     description: 'Download samo URL template.'
     required: false
-    default: 'https://github.com/lorislab/samo/releases/download/${version}/samo_${version}_Linux_x86_64.tar.gz''
+    default: 'https://github.com/lorislab/samo/releases/download/${version}/samo_${version}_Linux_x86_64.tar.gz'
 outputs: {}
 runs:
   using: 'node16'
