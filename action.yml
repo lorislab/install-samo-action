@@ -1,0 +1,15 @@
+name: 'Install samo build utility'
+description: 'Samo build and release project, helm and docker utility.'
+inputs:
+  version:
+      description: 'Version of the samo build utility'
+      required: false
+      default: '3.3.0'
+  download_url:
+    description: 'Download samo URL template.'
+    required: false
+    default: 'https://github.com/lorislab/samo/releases/download/${version}/samo_${version}_Linux_x86_64.tar.gz''
+outputs: {}
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
