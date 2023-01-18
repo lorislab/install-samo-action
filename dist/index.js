@@ -6716,9 +6716,9 @@ async function run() {
       s = s.replace(/\$\{version\}/g, version)
       return s
     }
+    
     downloadURL = fillTemplate(downloadURL);
     core.info(`samo donwload URL: ${downloadURL}`)
-    core.info(`smoke test:        ${test}`)
     
     await installTool(version, downloadURL);    
     await exec.exec('samo version');
