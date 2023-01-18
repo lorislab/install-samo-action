@@ -14,6 +14,7 @@ async function run() {
       s = s.replace(/\$\{version\}/g, version)
       return s
     }
+    
     downloadURL = fillTemplate(downloadURL);
     core.info(`samo donwload URL: ${downloadURL}`)
     
