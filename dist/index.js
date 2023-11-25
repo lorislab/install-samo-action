@@ -6736,6 +6736,7 @@ async function installTool(version, url) {
 
   const file = await tc.downloadTool(url);
 
+  await exec.exec(`rm -rf samo`)
   await exec.exec(`mkdir samo`)
   await exec.exec(`tar -C samo -xzvf ${file} --strip-components 0 --wildcards samo`)
 
