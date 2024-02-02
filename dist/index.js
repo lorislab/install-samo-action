@@ -6710,10 +6710,14 @@ async function run() {
   try {
     
     let version = core.getInput('version');
+    let platform = core.getInput('platform');
+    let os = core.getInput('os');
     let downloadURL = core.getInput('download_url');
 
     const fillTemplate = function(s) {
       s = s.replace(/\$\{version\}/g, version)
+      s = s.replace(/\$\{platform\}/g, platform)
+      s = s.replace(/\$\{os\}/g, os)
       return s
     }
     

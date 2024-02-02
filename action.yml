@@ -8,11 +8,19 @@ inputs:
   version:
     description: 'Version of the samo build utility'
     required: false
-    default: '3.7.0'
+    default: '3.9.0'
+  os:
+    description: 'Binary os (Darwin,Linux,Windows)'
+    required: false
+    default: 'Linux'    
+  platform:
+    description: 'Binary platform (amr64,i386,x86_64)'
+    required: false
+    default: 'x86_64'    
   download_url:
     description: 'Download samo URL template.'
     required: false
-    default: 'https://github.com/lorislab/samo/releases/download/${version}/samo_Linux_x86_64.tar.gz'
+    default: 'https://github.com/lorislab/samo/releases/download/${version}/samo_${os}_${platform}.tar.gz'
 outputs: {}
 runs:
   using: 'node20'
