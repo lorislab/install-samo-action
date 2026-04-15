@@ -12,16 +12,16 @@ inputs:
   os:
     description: 'Binary os (Darwin,Linux,Windows)'
     required: false
-    default: 'Linux'    
+    default: 'Linux'
   platform:
     description: 'Binary platform (amr64,i386,x86_64)'
     required: false
-    default: 'x86_64'    
+    default: 'x86_64'
   download_url:
     description: 'Download samo URL template.'
     required: false
     default: 'https://github.com/lorislab/samo/releases/download/${version}/samo_${os}_${platform}.tar.gz'
 outputs: {}
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
